@@ -1,0 +1,10 @@
+.has-bg-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/BG.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.neptune {
+    width: 27%;
+    padding: 60px;
+}
