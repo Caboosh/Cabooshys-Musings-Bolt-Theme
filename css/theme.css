@@ -1,10 +1,68 @@
-.has-bg-img {
+.parallax {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/BG.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+}.parallax-800px {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/BG.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 800px;
 }
 .neptune {
     width: 27%;
     padding: 60px;
+}
+.fa-html5 {
+    color: #f16529 !important;
+}
+.fa-css3-alt {
+    color: #1c88c7 !important;
+}
+.fa-js-square {
+    color: #f7df1e !important;
+}
+.fa-python {
+    color: #f7df1e !important;
+}
+.fa-php {
+    color: #9da7d4 !important;
+}
+.fa-git-alt {
+    color: #F34F29 !important;
+}
+.fa-laravel {
+    color: #F05340 !important;
+}
+.fa-wordpress {
+    color: #0094d1 !important;
+}
+
+.icn {
+    font-size: 9.5vw;
+}
+.skills-icons {
+    display: inline-block!important;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-left: 60px;
+}
+
+#skills hr {
+    background: rgba(255,255,255,.3);
+}
+hr {
+    height: 4px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    background: #333;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4da8',endColorstr='#4977c2',GradientType=1 );
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: 0;
 }
