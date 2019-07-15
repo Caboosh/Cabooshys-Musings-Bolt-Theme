@@ -1,11 +1,11 @@
 .parallax {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/BG.jpg');
-    background-size: cover;
-    background-position: center center;
+    background-size: auto;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 500px;
-}.parallax-800px {
+}
+.parallax-800px-dark {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/BG.jpg');
     background-size: cover;
     background-position: center center;
@@ -14,8 +14,13 @@
     height: 800px;
 }
 .neptune {
-    width: 27%;
-    padding: 60px;
+     width: 27%;
+     padding: 60px;
+ }
+.vert {
+    width: 22%;
+    padding: 30px;
+    padding-right: 100px;
 }
 .fa-html5 {
     color: #f16529 !important;
