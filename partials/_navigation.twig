@@ -1,0 +1,48 @@
+<header class="navbar is-transparent">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <img src="{{ asset('images/Logo.png', 'files') }}" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+        </div>
+        <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="{{ path('homepage')}}" class="navbar-item has-text-white">
+                    Home
+                </a>
+                <a href="{{ url('blog') }}" class="navbar-item has-text-white">
+                    The Blog
+                </a>
+                <a href="htps://discord.gg/C9UFksP" class="navbar-item has-text-white">
+                    My Discord Server
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link has-text-white">
+                        The Discord Bots
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a href="{{ path('purple-heart') }}" class="navbar-item has-text-black">
+                            CPU Purple Heart
+                        </a>
+                        <a href="{{ path('green-heart') }}" class="navbar-item has-text-black">
+                            CPU Green Heart
+                        </a>
+                        <hr class="navbar-divider">
+                        <div class="navbar-item has-text-black">
+                            <a href="https://github.com/Caboosh/CPU-Purple-Heart">Neptune - Version 0.4a</a>
+                        </div>
+                        <div class="navbar-item has-text-black">
+                            <a href="https://github.com/Caboosh/CPU-Green-Heart">Vert    - Version 0.1a</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
