@@ -1,8 +1,8 @@
-    {{ include("partials/_header.twig")}}
+    {% include("partials/_header.twig") %}
         <section class="hero is-dark is-fullheight-with-navbar parallax">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
-            {{ include("partials/_navigation.twig")}}
+            {%  include("partials/_navigation.twig") %}
         </div>
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
@@ -127,6 +127,6 @@
             </div>
         </div>
     </section>
-    {{ include("partials/_footer.twig")}}
-</body>
-</html>
+        {%  include("partials/_footer.twig") %}
+        </body>
+        </html>

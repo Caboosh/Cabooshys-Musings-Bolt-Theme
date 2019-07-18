@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    {% setcontent page = 'page/blog' %}
-    <title>Cameron's Dev Blog | {{ page.title }}</title>
+    <title>{{ page.title }} | Cameron's Dev Blog</title>
     {% block Stylesheets %}
         <link rel="stylesheet" href="{{ asset('assets/css/bulma.css', 'theme') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/theme.css', 'theme') }}">
