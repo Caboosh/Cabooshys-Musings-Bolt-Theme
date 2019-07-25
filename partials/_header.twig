@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>{{ page.title }} | Cameron's Dev Blog</title>
+    <title>{% if homepage %} {{ homepage.title }} {% else %} {{ page.title }} | Cameron's Dev Blog {% endif %}</title>
     {% block Stylesheets %}
         <link rel="stylesheet" href="{{ asset('assets/css/bulma.css', 'theme') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/theme.css', 'theme') }}">

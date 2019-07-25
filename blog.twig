@@ -1,1 +1,69 @@
 {% extends 'partials/_blog_master.twig' %}
+{% setcontent records = 'entries' %}
+{% block content %}
+    <section class="section">
+        <!-- Featured -->
+        <div class="container-fluid">
+            <div class="columns">
+                <div class="column">
+                    <p style="font-size: 2rem;" class="title is-centered">
+                        Recent Blog Posts
+                    </p>
+                    <div class="columns is-multiline">
+                        <div class="column is-8">
+                            {% for record in records %}
+
+                                <!-- start of post -->
+                                <article role="article" class="box">
+                                    <!-- box header -->
+                                    <div class="box-header">
+                                        <h4 class="title is-4">
+                                            {{ record.title }}
+                                        </h4>
+                                        <small>By: {{ record.user.displayname }}</small>
+                                    </div>
+                                    <!-- end of box header -->
+                                    <!-- box content -->
+                                    <div class="box-content">
+                                        <div class="columns">
+                                            <div class="column is-3">
+                                                <img src="/images/bolt-logo.png" alt="">
+                                            </div>
+                                            <div class="column">
+                                                <div class="box-content-text">
+                                                    {% if record.introduction %}
+                                                    {{ record.introduction }}
+                                                    {% elseif record.teaser %}
+                                                        {{ record.teaser }}
+                                                    {% else %}
+                                                        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="has-text-right">
+                                                    <a class="button is-small" href="{{ record.link }}">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end box content -->
+                                </article>
+                                <!-- end of post -->
+                            {% endfor %}
+                            <!-- pagination -->
+                            <nav class="pagination">
+                                <div class="pagination-fields">
+                                    <a class="button" href="">Previous Page</a>
+                                    <a class="button" href="">Next page</a>
+                                </div>
+                            </nav>
+                            <!-- end of pagination -->
+                        </div>
+                        {% block sidebar %}
+                            {% include 'partials/_aside.twig' %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% include 'partials/_header.twig' %}
+<section class="hero is-dark is-fullheight-with-navbar parallax">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+        {% include 'partials/_navigation.twig' %}
+    </div>
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 style="font-size: 3rem;" class="title">
+                {{ page.title }}
+            </h1>
+            <h2 style="font-size: 1.5rem;" class="subtitle">
+                {{ page.teaser }}
+            </h2>
+        </div>
+        <img class="neptune" src="{{ asset('images/adult-neptune-0.png', 'files') }}" alt="CPU Purple Heart"/>
+    </div>
+</section>
+<section class="section">
+    <!-- Featured -->
+    <div class="container-fluid">
+        <div class="columns">
+            <div class="column">
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            {% setcontent neptune = 'block/neptune-but-on-discord' %}
+                            <p style="font-size: 2rem;" class="title is-centered">
+                                {{ neptune.title }}
+                            </p>
+                            <p class="subtitle">
+                                {{ neptune.content }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tile is-4 is-parent">
+                        <div class="tile is-child box ">
+                            {% setcontent aboutneptune = 'block/about-neptune' %}
+                            <p style="font-size: 2rem;" class="title is-centered">
+                                {{ aboutneptune.title }}
+                            </p>
+                            <p class="subtitle">
+                                {{ aboutneptune.content }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section parallax">
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <p style="font-size: 2rem;" class="title is-centered">
+                        What Can She Do?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    {% setcontent moderation = 'block/moderation' %}
+                    <p style="font-size: 2rem;" class="title is-centered">
+                        {{ moderation.title }}
+                    </p>
+                    <p class="subtitle">
+                        {{ moderation.content }}
+                    </p>
+                </div>
+            </div>
+            <div class="tile is-4 is-parent">
+                <div class="tile is-child box ">
+                    {% setcontent memes = 'block/memes' %}
+                    <p style="font-size: 2rem;" class="title is-centered">
+                       {{ memes.title }}
+                    </p>
+                    <p class="subtitle">
+                        Meme the shit out of someone if you feel like it!<br>
+                        {{ memes.content }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    {% setcontent othercmds = 'block/other-cmds' %}
+                    <p style="font-size: 2rem;" class="title is-centered">
+                       {{ othercmds.title }}
+                    </p>
+                    <p class="subtitle">
+
+                    </p>
+                </div>
+            </div>
+            <div class="tile is-4 is-parent">
+                <div class="tile is-child box ">
+                    <p style="font-size: 2rem;" class="title is-centered">
+                        Music
+                    </p>
+                    <p class="subtitle">
+                        No Bot nowadays is complete without being able to blast your favourite earrape meme song at your friends!
+                        <br>
+                        Oh and it can be used for normal music too.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile has-text-centered is-child box">
+                    <p style="font-size: 2rem;" class="title is-centered">
+                        Click the Button to go to the Docs page for more in depth Information!
+                    </p>
+                    <a href="#" class="button ">Read the F**kin Docs!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% include 'partials/_footer.twig' %}
