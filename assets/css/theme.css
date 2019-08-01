@@ -21,6 +21,9 @@
     width: 22%;
     padding: 30px;
     padding-right: 100px;
+    position: relative;
+    left: 170px;
+    top: 12px;
 }
 .fa-html5 {
     color: #f16529 !important;
