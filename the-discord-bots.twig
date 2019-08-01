@@ -1,0 +1,20 @@
+{% include 'partials/_header.twig' %}
+<section class="hero is-dark is-fullheight-with-navbar parallax">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+        {% include 'partials/_navigation.twig' %}
+    </div>
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div style="position: relative; bottom: 28px;" class="container has-text-centered">
+            <h1 style="font-size: 3rem;" class="title">
+                {{ page.title }}
+            </h1>
+            <h2 style="font-size: 1.5rem;" class="subtitle">
+                {{ page.teaser }}
+            </h2>
+        </div>
+        <img class="vert" src="{{ asset('images/green-heart.png', 'files') }}" alt="CPU Green Heart"/>
+        <img class="neptune" src="{{ asset('images/adult-neptune-0.png', 'files') }}" alt="CPU Purple Heart"/>
+    </div>
+</section>

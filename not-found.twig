@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Page Not Found | Cameron's Dev Blog</title>
+    {% block Stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/404.css', 'theme') }}">
+    {% endblock %}
+</head>
+<body class="parallax-800px-dark">
+        <div id="notfound">
+            <div class="notfound">
+                <div class="notfound-404">
+                    <h1>404</h1>
+                    <h2>Page not found</h2>
+                </div>
+                <h3 class="notfound-h3">The Page You were Looking For either does not Exist or is not available.</h3>
+                <a href="{{ path('homepage') }}">Back Home</a>
+            </div>
+        </div>
+</body>
