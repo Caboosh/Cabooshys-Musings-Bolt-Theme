@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>{{ record.title }} | Cameron's Dev Blog</title>
+    {% block Stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/bulma.css', 'theme') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/theme.css', 'theme') }}">
+    {% endblock %}
+</head>
+<body>
+<section class="hero is-dark is-medium parallax">
+    <!--Hero HEad: Sticks to the Top -->
+    <div class="hero-head">
+        <div>
+            {% include 'partials/_navigation.twig' %}
+        </div>
+    </div>
+    <!-- Hero Content: Will be in the middle of the Hero Section -->
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-centered" style="font-size: 4.5rem">
+               {{ record.title }}
+            </h1>
+            <h2 class="subtitle has-text-centered" style="font-size: 1.7rem">
+                {{ record.teaser }}
+            </h2>
+            <h2 class="subtitle has-text-centered" style="font-size: 1.7rem">
+                <small>Posted on {{ record.datepublish }}</small>
+            </h2>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <!-- main page content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="columns is-centered has-overlap">
+                <div class="column is-10">
+                    <!-- start of post -->
+                    <div class="box box-single-post">
+                        <!-- box content -->
+                        <div class="box-content">
+                            <div class="box-content-text">
+                                <p>
+                                    {{record.body}}
+                                </p>
+                            </div>
+                            <div class="has-text-right">
+                                <a class="button is-small" href="{{ path("blog") }}">Back Home</a>
+                            </div>
+                        </div>
+                        <!-- end box content -->
+                    </div>
+                </div>
+                <!-- end of post -->
+            </div>
+        </div>
+    </div>
+    <!-- end of main page content -->
+</section>
+<section class="section">
+    <!-- pagination -->
+    <div class="columns is-centered">
+        <nav class="pagination">
+            <div class="pagination-fields">
+                <div class="button" href="">Previous Post</div>
+                <div class="button">Next Post</div>
+            </div>
+        </nav>
+    </div>
+    <!-- end of pagination -->
+</section>
+{% include 'partials/_footer.twig' %}
