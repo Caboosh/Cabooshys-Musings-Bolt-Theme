@@ -52,17 +52,43 @@
         </div>
     </div>
 </section>
-<section class="section parallax-800px-dark">
-    <div class="tile is-4 is-parent">
-        <div class="tile is-child box ">
-            <p style="font-size: 2rem;" class="title has-text-centered">
-                Neptune | CPU Purple Heart
-            </p>
-            <br>
-            <p class="subtitle">
-                Because Console Waifus. Anyways onto the bot explanations.
-            </p>
+<section class="section parallax-dark">
+    <div class="columns">
+        <div class="column" style="justify-content: space-around">
+            <!-- Neptune -->
+            <div class="tile is-6 is-parent">
+                <div class="tile is-child box ">
+                    <p style="font-size: 2rem;" class="title has-text-centered">
+                        Neptune | CPU Purple Heart
+                    </p>
+                    <br>
+                    <p class="subtitle">
+                        Blah.
+                    </p>
+                </div>
+            </div>
+            <img class="neptune-tdb" src="{{ asset('images/adult-neptune-0.png', 'files') }}" alt="CPU Purple Heart"/>
         </div>
+        <div class="column" style="justify-content: space-around">
+            <!-- Vert -->
+            <img class="vert-tdb" src="{{ asset('images/green-heart.png', 'files') }}" alt="CPU Green Heart"/>
+            <div class="tile is-6 is-parent">
+                <div class="tile is-child box ">
+                    <p style="font-size: 2rem;" class="title has-text-centered">
+                        Vert | CPU Green Heart
+                    </p>
+                    <br>
+                    <p class="subtitle">
+                        Blah.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
     </div>
-    <img class="neptune-info is-right" src="{{ asset('images/adult-neptune-0.png', 'files') }}" alt="CPU Purple Heart"/>
+
 </section>
+{%  include("partials/_footer.twig") %}
+</body>
+</html>
