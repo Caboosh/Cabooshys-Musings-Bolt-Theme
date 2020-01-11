@@ -1,0 +1,47 @@
+body.login {
+    background: url("https://i.imgur.com/3RjKtLD.jpg") no-repeat center center /cover;
+}
+body.login .panel {
+    border-radius: 10px !important;
+}
+.login .view-site {
+    color: #ffffff91;
+}
+.login .view-site a {
+    color: inherit;
+}
+.login .quote {
+    display: none;
+}
+img.logo {
+    background: #ffffff91;
+    -webkit-box-shadow: 0 0 150px rgba(0,0,0,.15);
+    box-shadow: 0 0 150px rgba(0,0,0,.15);
+}
+.logo {
+    padding: 15px;
+    border-radius: 10px;
+}
+.panel-default {
+    background: #ffffff91 !important;
+    border-color: rgba(221, 221, 221, 0) !important;
+}
+.input-group-addon {
+    background-color: #eeeeeead !important;
+}
+.form-control {
+    background-color: #ffffff96 !important;
+}
+body.login .control-label {
+    color: #FFF !important;
+}
+.btn-link{
+     color: #00519a !important;
+     text-decoration: none !important;
+     background-color: transparent;
+ }
+.btn-link:hover, .btn-link:focus {
+    color: #007cc6 !important;
+    text-decoration: none !important;
+    background-color: transparent;
+}

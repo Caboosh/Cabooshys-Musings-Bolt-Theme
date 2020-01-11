@@ -1,0 +1,150 @@
+{% include 'partials/_header.twig' %}
+    <section class="hero is-dark is-large parallax">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            {%  include("partials/_navigation.twig") %}
+        </div>
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 style="font-size: 3rem;" class="title">
+                    {{ page.title }}
+                </h1>
+                <h2 style="font-size: 1.5rem;" class="subtitle">
+                    {{ page.teaser }}
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+    <!-- Featured -->
+    <div class="container-fluid">
+        <div class="columns">
+            <div class="column">
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            {% setcontent portfolioAbout = 'block/a-bit-more-about-me' %}
+                            <p style="font-size: 2rem;" class="title is-centered">
+                                {{ portfolioAbout.title }}
+                            </p>
+                            <br>
+                            <p class="subtitle">
+                                {{ portfolioAbout.content }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tile is-4 is-parent">
+                        <div class="tile is-child box ">
+                            {% setcontent porfolioSkills = 'block/my-skills' %}
+                            <p style="font-size: 2rem;" class="title is-centered">
+                              {{ porfolioSkills.title }}
+                            </p>
+                            <br>
+                            <p class="subtitle">
+                               {{ porfolioSkills.content }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section parallax">
+    <div class="container-fluid">
+        <p style="font-size: 2rem;" class="title has-text-white has-text-centered">
+            Showcase
+        </p>
+        <div class="tile is-ancestor">
+            <div class="tile is-6 is-parent">
+                <div class="tile is-child box">
+                    <p style="font-size: 2rem;" class="title has-text-centered">
+                    This Site!
+                    </p>
+                    <a href="https://codecameron.dev"><img src="{{ asset('images/portfolio-site.jpg', 'files') }}" alt="Photo of the Site!"></a>
+                    <button class="button is-large modal-button" data-target="modal" aria-haspopup="true">Learn More</button>
+                </div>
+                <div class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">Modal title</p>
+                            <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                            <!-- Content ... -->
+                        </section>
+                        <footer class="modal-card-foot">
+                            <button class="button is-success">Save changes</button>
+                            <button class="button">Cancel</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        <div class="tile is-6 is-parent">
+                <div class="tile is-child box">
+                    <p style="font-size: 2rem;" class="title has-text-centered">
+                        Impact Express
+                    </p>
+                    <a href="https://impactexpress.co.uk"><img src="{{ asset('images/portfolio-impact.jpg', 'files') }}" alt="Photo of the Site!"></a>
+                    <a href="#" class="has-text-centered button">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <p style="font-size: 2rem;" class="title is-centered">
+                      
+                    </p>
+                    <p class="subtitle">
+                      
+                    </p>
+                </div>
+            </div>
+            <div class="tile is-6 is-parent">
+                <div class="tile is-child box ">
+                    <p style="font-size: 2rem;" class="title is-centered">
+
+                    </p>
+                    <p class="subtitle">
+                    
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tile is-ancestor">
+            <div class="tile is 6 is-parent">
+                <div class="tile is-child box">
+                    <p style="font-size: 2rem;" class="title is-centered">
+                    
+                    </p>
+                    <p class="subtitle">
+                    
+                    </p>
+                </div>
+            </div>
+            <div class="tile is-6 is-parent">
+                <div class="tile is-child box ">
+                    <p style="font-size: 2rem;" class="title is-centered">
+                    
+                    </p>
+                    <p class="subtitle">
+                    
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile has-text-centered is-child box">
+                    <p style="font-size: 2rem;" class="title is-centered">
+                
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include 'partials/_footer.twig' %}

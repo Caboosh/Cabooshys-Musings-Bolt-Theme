@@ -1,18 +1,19 @@
 {% extends 'partials/_blog_master.twig' %}
-{% setcontent records = 'entries' %}
+{% setcontent records = 'entries' allowpaging %}
 {% block content %}
     <section class="section">
         <!-- Featured -->
+        <p style="font-size: 2rem;" class="title is-centered">
+            Recent Blog Posts
+        </p>
         <div class="container-fluid">
             <div class="columns">
-                <div class="column">
-                    <p style="font-size: 2rem;" class="title is-centered">
-                        Recent Blog Posts
-                    </p>
                     <div class="columns is-multiline">
-                        <div class="column is-8">
-                            {% for record in records %}
+                        <div class="column">
 
+                        </div>
+                        <div class="column is-7" style="display: block;">
+                            {% for record in records %}
                                 <!-- start of post -->
                                 <article role="article" class="box">
                                     <!-- box header -->
@@ -29,18 +30,20 @@
                                             <div class="column is-3">
                                                 <img src="/images/bolt-logo.png" alt="">
                                             </div>
-                                            <div class="column">
+                                            <div class="column is-7">
                                                 <div class="box-content-text">
                                                     {% if record.introduction %}
-                                                    {{ record.introduction }}
+                                                    <div>{{ record.introduction }}</div>
                                                     {% elseif record.teaser %}
-                                                        {{ record.teaser }}
+                                                    <div>{{ record.teaser }}</div>
                                                     {% else %}
-                                                        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+                                                        <div>{{ record.excerpt(300, false, search|default('')) }}</div>
                                                     {% endif %}
                                                 </div>
-                                                <div class="has-text-right">
-                                                    <a class="button is-small" href="{{ record.link }}">Read More</a>
+                                            </div>
+                                            <div class="column">
+                                                <div class="buttons has-addons">
+                                                    <a class="button" href="{{ record.link }}">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -52,18 +55,18 @@
                             <!-- pagination -->
                             <nav class="pagination">
                                 <div class="pagination-fields">
-                                    <a class="button" href="">Previous Page</a>
-                                    <a class="button" href="">Next page</a>
+                                    {{ pager() }}
                                 </div>
                             </nav>
                             <!-- end of pagination -->
                         </div>
-                        {% block sidebar %}
-                            {% include 'partials/_aside.twig' %}
-                        {% endblock %}
+                        <div class="column is-4">
+                            {% block sidebar %}
+                                {% include 'partials/_aside.twig' %}
+                            {% endblock %}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 {% endblock %}
