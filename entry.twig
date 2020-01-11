@@ -43,9 +43,9 @@
                         <!-- box content -->
                         <div class="box-content">
                             <div class="box-content-text">
-                                <p>
+                                <div class="content">
                                     {{record.body}}
-                                </p>
+                                </div>
                             </div>
                             <div class="has-text-right">
                                 <a class="button is-small" href="{{ path("blog") }}">Back Home</a>
@@ -65,8 +65,7 @@
     <div class="columns is-centered">
         <nav class="pagination">
             <div class="pagination-fields">
-                <div class="button" href="">Previous Post</div>
-                <div class="button">Next Post</div>
+                {{ pager('entries') }}
             </div>
         </nav>
     </div>
